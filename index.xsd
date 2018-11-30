@@ -1,0 +1,70 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://www.iata.org/IATA/EDIST/2017.2"
+            targetNamespace="http://www.iata.org/IATA/EDIST/2017.2"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            version="5.000"
+            id="IATA2017.2">
+    <!--
+         NDC is a IATA Standard.
+         Copyright (c) 2002,2010 IATA.
+         To obtain additional rights of use, visit http://www.iata.org/ndc/ .
+   -->
+    <!--
+    ==============================================================
+           Includes and Imports
+           ==============================================================
+   -->
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/Acknowledgement.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirDocDisplayRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirDocDisplayRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirDocHistoryRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirDocHistoryRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirDocIssueRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirDocNotifRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirShoppingRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirShoppingRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirlineProfileNotif.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirlineProfileRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/AirlineProfileRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/BaggageAllowanceRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/BaggageAllowanceRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/BaggageChargesRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/BaggageChargesRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/BaggageListRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/BaggageListRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/CustomerInputRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/CustomerInputRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/FareRulesRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/FareRulesRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/FileRetrieveRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/FileRetrieveRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/InvGuaranteeRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/InvGuaranteeRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/InvReleaseNotif.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OfferPriceRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OfferPriceRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderCancelRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderCancelRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderChangeNotif.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderChangeRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderCreateRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderHistoryRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderHistoryRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderListRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderListRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderReshopRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderReshopRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderRetrieveRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderRulesRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderRulesRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/OrderViewRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/SeatAvailabilityRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/SeatAvailabilityRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/ServiceListRQ.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/ServiceListRS.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/aidm_commontypes.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/edist_commontypes.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/edist_structures.xsd" />
+    <xsd:import namespace="http://www.iata.org/IATA/EDIST/2017.2" schemaLocation="http://localhost:5000/xmldsig-core-schema.xsd" />
+</xsd:schema>
